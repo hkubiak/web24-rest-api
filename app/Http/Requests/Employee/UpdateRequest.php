@@ -28,7 +28,7 @@ class UpdateRequest extends FormRequest
             'last_name' => 'required|string',
             'email' => 'required|email',
             'phone' => 'nullable|string',
-            'company_id' => 'required|exists:companies,id'
+            'company_id' => 'sometimes|integer|exists:companies,id'
         ];
     }
 }

@@ -28,7 +28,7 @@ class StoreRequest extends FormRequest
             'last_name' => 'required|string',
             'email' => 'required|email',
             'phone' => 'nullable|string',
-            'company_id' => 'required|exists:companies,id'
+            'company_id' => 'required|integer|exists:companies,id'
         ];
     }
 }
